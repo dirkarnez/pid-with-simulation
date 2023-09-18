@@ -26,15 +26,4 @@ while (true) {
   const current_right_wheel_error = target_right_wheel_velocity - right_wheel_velocity;
   // line 8
   const PWM_assign_to_the_right_wheel = PWM_previously_assigned_to_the_right_wheel + (K3 * current_right_wheel_error) - (K4 * previous_right_wheel_error)
-
-
-  
-  
-
-  
-
-  
-  
-  
-  
 }
