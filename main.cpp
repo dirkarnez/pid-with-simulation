@@ -4,10 +4,10 @@ while (true) {
   // line 1
   const current_right_wheel_velocity = measure_current_right_wheel_velocity();
   // line 1
-  const wheel_velocity_error = current_left_wheel_velocity - current_right_wheel_velocity;
+  const current_wheel_velocity_error = current_left_wheel_velocity - current_right_wheel_velocity;
   
   // line 2
-  const current_control_signal = previous_control_signal + (K1 * wheel_velocity_error) - (K2 * previous_wheel_velocity_error)
+  const current_control_signal = previous_control_signal + (K1 * current_wheel_velocity_error) - (K2 * previous_wheel_velocity_error)
 
   // line 3
   const target_left_wheel_velocity = target_car_velocity - current_control_signal;
